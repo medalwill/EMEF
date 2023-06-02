@@ -12,7 +12,8 @@
 - Download our result from [Baidu Netdisk](https://pan.baidu.com/s/1KIHv6sILjqqUO5dBAk3ptA?pwd=emef) (code: emef).
 
 ## Evaluation
-We use the evaluation code from [MEFB](https://github.com/xingchenzhang/MEFB).
+- We use the evaluation code from [MEFB](https://github.com/xingchenzhang/MEFB).
+- We use a pytorch implementation of [MEF-SSIM](https://github.com/ChuangbinC/pytorch-MEF_SSIM) to optimize and evaluate our results.
 
 ## Acknowledgements
 Great thanks for [MEFB](https://github.com/xingchenzhang/MEFB) and all of the open source MEF methods. EMEF can't live without their public available code.
