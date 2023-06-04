@@ -21,10 +21,10 @@ Great thanks for [MEFB](https://github.com/xingchenzhang/MEFB) and all of the op
 ## Citation
 If you find our work useful in your research, please cite with:
 ```
-@article{liu2023emef,
+@inproceedings{liu2023emef,
   title={EMEF: Ensemble Multi-Exposure Image Fusion},
   author={Liu, Renshuai and Li, Chengyang and Cao, Haitao and Zheng, Yinglin and Zeng, Ming and Cheng, Xuan},
-  journal={arXiv preprint arXiv:2305.12734},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
   year={2023}
 }
 ```
