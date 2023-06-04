@@ -8,8 +8,8 @@
 <img src="figures/maincompare.png" width="100%">
 
 ## Result
-- Download our result from [Google Drive](https://drive.google.com/drive/folders/151LaYxeIk9Q0SZS9dVzucWCqiQ4ejhJe?usp=sharing).
-- Download our result from [Baidu Netdisk](https://pan.baidu.com/s/1KIHv6sILjqqUO5dBAk3ptA?pwd=emef) (code: emef).
+- Download our results from [Google Drive](https://drive.google.com/drive/folders/151LaYxeIk9Q0SZS9dVzucWCqiQ4ejhJe?usp=sharing).
+- Download our results from [Baidu Netdisk](https://pan.baidu.com/s/1KIHv6sILjqqUO5dBAk3ptA?pwd=emef) (code: emef).
 
 ## Evaluation
 - We use the evaluation code from [MEFB](https://github.com/xingchenzhang/MEFB).
