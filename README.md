@@ -1,4 +1,4 @@
-# 🌟 EMEF: Ensemble Multi-Exposure Image Fusion <a href="https://arxiv.org/abs/2305.12734"><img src="https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg" ></a> 
+# 🌟 EMEF: Ensemble Multi-Exposure Image Fusion, AAAI 2023 <a href="https://arxiv.org/abs/2305.12734"><img src="https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg" ></a> 
 - This repository is the official PyTorch implementation of EMEF
 - ✨We will release our code as soon as possible✨
 
