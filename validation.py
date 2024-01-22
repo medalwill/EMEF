@@ -54,6 +54,7 @@ if __name__ == '__main__':
     
     result_dir = os.path.join(web_dir, 'result.txt')
     result_str = 'ssim = %f, psnr = %f, l1 = %f' % (average_ssim, average_psnr, average_l1)
+    print(result_str)
     print(f'Save result to {result_dir}')
     save_result(result_dir, result_str)
     webpage.save()  # save the HTML
