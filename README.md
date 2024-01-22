@@ -11,6 +11,33 @@
 - Download our results from [Google Drive](https://drive.google.com/drive/folders/151LaYxeIk9Q0SZS9dVzucWCqiQ4ejhJe?usp=sharing).
 - Download our results from [Baidu Netdisk](https://pan.baidu.com/s/1KIHv6sILjqqUO5dBAk3ptA?pwd=emef) (code: emef).
 
+## Requirements
+- Install python and [pytorch](https://pytorch.org/get-started/locally/) correctly. 
+- Install other requirements.
+
+Here is the example with the help of conda environment:
+```
+conda create -n emef python=3.10
+conda activate emef
+conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
+pip install -r requirements.txt
+```
+
+## Datasets
+TODO
+
+## Training
+Start visdom for visualization:
+```
+python -m visdom.server
+```
+Start training:
+```
+python train.py --dataroot {path_to_SICE}/train --name demo --model demo --gpu_ids 1 --display_port 8097
+```
+
+
+
 ## Evaluation
 - We use the evaluation code from [MEFB](https://github.com/xingchenzhang/MEFB).
 - We use a pytorch implementation of [MEF-SSIM](https://github.com/ChuangbinC/pytorch-MEF_SSIM) to optimize and evaluate our results.
