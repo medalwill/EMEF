@@ -14,7 +14,7 @@
 - Install python and [pytorch](https://pytorch.org/get-started/locally/) correctly. 
 - Install other requirements.
 
-Here is the example with the help of conda environment:
+Here is the example with the help of conda:
 ```
 conda create -n emef python=3.10
 conda activate emef
