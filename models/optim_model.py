@@ -20,7 +20,7 @@ class OptimModel(BaseModel):
     def __init__(self, opt):
         BaseModel.__init__(self, opt)
         self.loss_names = ['G_MEFSSIM', 'tmp']
-        self.visual_names = ['oe', 'ue', 'fake_B', 'gt', 'oe_gray', 'ue_gray', 'fake_B_gray']
+        self.visual_names = ['oe', 'ue', 'fake_B', 'oe_gray', 'ue_gray', 'fake_B_gray']
         self.model_names = ['G']
         self.netG = networks.define_G(opt.input_nc * 2, opt.output_nc, opt.ngf, opt.netG, opt.norm,
                                       not opt.no_dropout, opt.init_type, opt.init_gain, self.gpu_ids)
@@ -32,7 +32,6 @@ class OptimModel(BaseModel):
     def set_input(self, data):
         self.oe = data["oe"].to(self.device)
         self.ue = data["ue"].to(self.device)
-        self.gt = data["gt"].to(self.device)
         self.cls = torch.nn.Parameter(torch.zeros(1, 4), requires_grad=True)
         self.optimizer = torch.optim.Adam([self.cls], lr=self.opt.lr, betas=(self.opt.beta1, 0.999))
         self.image_paths = data['image_name']

@@ -9,7 +9,10 @@ class HDRDataset(BaseDataset):
     def __init__(self, opt):
         BaseDataset.__init__(self, opt)
         self.stage = opt.stage
-        self.dir_images = os.path.join(opt.dataroot, "gt")
+        if self.stage == 1:
+            self.dir_images = os.path.join(opt.dataroot, "gt")
+        else:
+            self.dir_images = os.path.join(opt.dataroot, "oe")
         self.oe = os.path.join(opt.dataroot, "oe")
         self.ue = os.path.join(opt.dataroot, "ue")
         self.image_names = [x.replace(".jpg", "").replace(".png", "") for x in os.listdir(self.dir_images)]
@@ -47,18 +50,19 @@ class HDRDataset(BaseDataset):
     def __getitem__(self, index):
         image_name = self.image_names[index]
         image_path = os.path.join(self.dir_images, image_name + ".png")
-
-        image = self.transforms(Image.open(image_path))
+        
         if self.stage == 1:
+            image = self.transforms(Image.open(image_path))
+            normalized_image = self.normalize(image)
+            
             oe_path = os.path.join(self.oe, str(int(image_name[0:3]))+'.png')
             ue_path = os.path.join(self.ue, str(int(image_name[0:3])) + '.png')
         else:
             oe_path = os.path.join(self.oe, image_name + '.png')
             ue_path = os.path.join(self.ue, image_name + '.png')
+            
         oe = self.transforms(Image.open(oe_path))
         ue = self.transforms(Image.open(ue_path))
-
-        normalized_image = self.normalize(image)
         normalized_oe = self.normalize(oe)
         normalized_ue = self.normalize(ue)
 
@@ -68,7 +72,7 @@ class HDRDataset(BaseDataset):
             return {"gt": normalized_image, "oe": normalized_oe, "ue": normalized_ue, "image_name": image_name,
                     "cls": cls}
         else:
-            return {"gt": normalized_image, "oe": normalized_oe, "ue": normalized_ue, "image_name": image_name}
+            return {"oe": normalized_oe, "ue": normalized_ue, "image_name": image_name}
 
     def __len__(self):
         """Return the total number of images in the dataset."""
