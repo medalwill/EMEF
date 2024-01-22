@@ -43,9 +43,10 @@ python validation.py --dataroot {path_to_SICE}/test --name demo --model demo --p
 ```
 python optimize.py --dataroot {path_to_MEFB} --name demo --model optim --gpu_ids 1 --display_port 8097
 ```
-
-
-
+- Get MEF-SSIM score (*evaldata* has 3 subdirs: fake, oe, ue):
+```
+python eval.py --dataroot {path_to_evaldata} --name eval --model eval --phase test
+```
 ## Evaluation
 - We use the evaluation code from [MEFB](https://github.com/xingchenzhang/MEFB).
 - We use a pytorch implementation of [MEF-SSIM](https://github.com/ChuangbinC/pytorch-MEF_SSIM) to optimize and evaluate our results.
