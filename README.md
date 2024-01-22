@@ -26,14 +26,22 @@ pip install -r requirements.txt
 ## Datasets
 TODO
 
-## Training
-Start visdom for visualization:
+## Get Started
+- Start visdom for visualization:
 ```
 python -m visdom.server
 ```
-Start training:
+- Train Stage 1:
 ```
 python train.py --dataroot {path_to_SICE}/train --name demo --model demo --gpu_ids 1 --display_port 8097
+```
+- Validate Stage 1:
+```
+python validation.py --dataroot {path_to_SICE}/test --name demo --model demo --phase test --no_dropout --epoch latest --gpu_ids 1
+```
+- Stage 2:
+```
+python optimize.py --dataroot {path_to_MEFB} --name demo --model optim --gpu_ids 1 --display_port 8097
 ```
 
 
