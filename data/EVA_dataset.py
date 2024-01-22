@@ -7,9 +7,9 @@ import os.path
 class EVADataset(BaseDataset):
     def __init__(self, opt):
         BaseDataset.__init__(self, opt)
-        self.dir_images = opt.dataroot
-        self.oe = r'C:/data/MEFB/oe'
-        self.ue = r'C:/data/MEFB/ue'
+        self.dir_images = os.path.join(opt.dataroot, "fake")
+        self.oe = os.path.join(opt.dataroot, "oe")
+        self.ue = os.path.join(opt.dataroot, "ue")
         self.image_names = [x.replace(".jpg", "").replace(".png", "") for x in os.listdir(self.dir_images)]
         self.isTrain = opt.isTrain
 
