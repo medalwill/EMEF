@@ -6,7 +6,7 @@
 <img src="figures/pipeline.png" width="100%">
 <img src="figures/maincompare.png" width="100%">
 
-## Result
+## Results
 - Download our results from [Google Drive](https://drive.google.com/drive/folders/151LaYxeIk9Q0SZS9dVzucWCqiQ4ejhJe?usp=sharing).
 - Download our results from [Baidu Netdisk](https://pan.baidu.com/s/1KIHv6sILjqqUO5dBAk3ptA?pwd=emef) (code: emef).
 
