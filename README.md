@@ -23,7 +23,45 @@ pip install -r requirements.txt
 ```
 
 ## Datasets
-TODO
+We train EMEF in [SICE](https://github.com/csjcai/SICE).
+```
+- SICE
+  - train
+    - gt
+      - 001_00.png
+      - 001_01.png
+      - 001_02.png
+      - 001_03.png
+      - 002_00.png
+      ...
+    - oe
+      - 1.png
+      - 2.png
+      ...
+    - ue
+      - 1.png
+      - 2.png
+      ...
+  - test
+    ...
+```
+We evaluate EMEF in [MEFB](https://github.com/xingchenzhang/MEFB).
+```
+- MEFB
+  - oe
+    - 1.png
+    - 2.png
+    ...
+  - ue
+    - 1.png
+    - 2.png
+    ...
+```
+
+## Pretrained Model
+Here we provide our pretrained model:
+
+[Google Drive](https://drive.google.com/drive/folders/13fIAHG2yAgCIoegbA3mv2jP1ZSglG-nR?usp=drive_link) | [Baidu Netdisk](https://pan.baidu.com/s/1m1ijn6o93mIJ_hsoAxlanw?pwd=emef) (code: emef)
 
 ## Get Started
 - Start visdom for visualization:
